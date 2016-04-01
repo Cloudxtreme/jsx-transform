@@ -180,6 +180,8 @@ function transformCode(code, url, options) {
  */
 function run(code, url, options) {
   var scriptEl = document.createElement('script');
+  if (options.nonce)
+      script.setAttribute('nonce', options.nonce);
   scriptEl.text = transformCode(code, url, options);
   headEl.appendChild(scriptEl);
 }
@@ -255,6 +257,8 @@ function loadScripts(scripts) {
 
     // script.async is always true for non-javascript script tags
     var async = script.hasAttribute('async');
+    if (script.hasAttribute('nonce'))
+        options.nonce = script.getAttribute('nonce');
 
     if (script.src) {
       result[i] = {
