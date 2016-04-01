@@ -1,0 +1,14 @@
+{
+  "name": "jsx-transform-cockpit",
+  "description": "JSX in-browser transform with additional updactes",
+  "version": "0.13.3",
+  "main": "jsx.js",
+  "dependencies": {
+  },
+  "ignore": [
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cockpit/jsx-transform.git"
+  }
+}
